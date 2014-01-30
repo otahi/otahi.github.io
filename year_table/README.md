@@ -1,4 +1,4 @@
-# Yaar Table #
+# Year Table #
 
 making a year table with graphiz.
 
