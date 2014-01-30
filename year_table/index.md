@@ -1,4 +1,4 @@
-# Yaar Table #
+# Year Table #
 
 ![Year Table](year_table.png)
 
