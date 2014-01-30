@@ -69,4 +69,5 @@ Graph do
 
 
   save(:year_table, :svg)
+  save(:year_table, :png)
 end
