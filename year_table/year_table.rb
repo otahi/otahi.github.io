@@ -5,7 +5,7 @@ sections =
   [
    {src: -384, dst: -322, label: "アリストテレス" },
    {src: -190, dst: -125, label: "ヒッパルコス" },
-   {src:  125, dst:  175, label: "プトレマイオス" },
+   {src:   83, dst:  168, label: "プトレマイオス" },
    {src: 1473, dst: 1543, label: "コペルニクス" },
    {src: 1564, dst: 1642, label: "ガリレオ" },
    {src: 1642, dst: 1727, label: "ニュートン" },
