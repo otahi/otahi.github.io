@@ -1,5 +1,5 @@
 # Year Table #
 
-![Year Table](year_table.svg)
+[![Year Table](year_table.svg)](http://otahi.github.io/year_table/year_table.svg)
 
 [github](https://github.com/otahi/otahi.github.io/tree/master/year_table)
