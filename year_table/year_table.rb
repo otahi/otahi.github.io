@@ -3,8 +3,18 @@ require "gviz"
 
 sections =
   [
-   {src: -552, dst: -479, label: "孔子(こうし)",img: "./images/Confucius_02.png", img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Confucius_02.png/59px-Confucius_02.png", link: "http://commons.wikimedia.org/wiki/File:Confucius_02.png" },
-   {src: -469, dst: -399, label: "ソクラテス", img: "./images/Socrate.jpg", img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Anderson%2C_Domenico_%281854-1938%29_-_n._23185_-_Socrate_%28Collezione_Farnese%29_-_Museo_Nazionale_di_Napoli.jpg/92px-Anderson%2C_Domenico_%281854-1938%29_-_n._23185_-_Socrate_%28Collezione_Farnese%29_-_Museo_Nazionale_di_Napoli.jpg", link: "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Anderson,_Domenico_(1854-1938)_-_n._23185_-_Socrate_(Collezione_Farnese)_-_Museo_Nazionale_di_Napoli.jpg"},
+   {
+     src: -552, dst: -479, label: "孔子(こうし)",
+     img: "./images/Confucius_02.png",
+     img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Confucius_02.png/59px-Confucius_02.png",
+     link: "http://commons.wikimedia.org/wiki/File:Confucius_02.png"
+   },
+   {
+     src: -469, dst: -399, label: "ソクラテス",
+     img: "./images/Socrate.jpg",
+     img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Anderson%2C_Domenico_%281854-1938%29_-_n._23185_-_Socrate_%28Collezione_Farnese%29_-_Museo_Nazionale_di_Napoli.jpg/92px-Anderson%2C_Domenico_%281854-1938%29_-_n._23185_-_Socrate_%28Collezione_Farnese%29_-_Museo_Nazionale_di_Napoli.jpg",
+     link: "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Anderson,_Domenico_(1854-1938)_-_n._23185_-_Socrate_(Collezione_Farnese)_-_Museo_Nazionale_di_Napoli.jpg"
+   },
    {src: -463, dst: -383, label: "シャカ" },
    {src: -427, dst: -347, label: "プラトン" },
    {src: -384, dst: -322, label: "アリストテレス" },
