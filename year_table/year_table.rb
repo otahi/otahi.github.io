@@ -3,8 +3,8 @@ require "gviz"
 
 sections =
   [
-   {src: -552, dst: -479, label: "孔子(こうし)" },
-   {src: -469, dst: -399, label: "ソクラテス" },
+   {src: -552, dst: -479, label: "孔子(こうし)",img: "./images/Confucius_02.png", img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Confucius_02.png/59px-Confucius_02.png", link: "http://commons.wikimedia.org/wiki/File:Confucius_02.png" },
+   {src: -469, dst: -399, label: "ソクラテス", img: "./images/Socrate.jpg", img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Anderson%2C_Domenico_%281854-1938%29_-_n._23185_-_Socrate_%28Collezione_Farnese%29_-_Museo_Nazionale_di_Napoli.jpg/92px-Anderson%2C_Domenico_%281854-1938%29_-_n._23185_-_Socrate_%28Collezione_Farnese%29_-_Museo_Nazionale_di_Napoli.jpg", link: "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Anderson,_Domenico_(1854-1938)_-_n._23185_-_Socrate_(Collezione_Farnese)_-_Museo_Nazionale_di_Napoli.jpg"},
    {src: -463, dst: -383, label: "シャカ" },
    {src: -427, dst: -347, label: "プラトン" },
    {src: -384, dst: -322, label: "アリストテレス" },
@@ -36,7 +36,7 @@ sections =
 
 
 Graph do
-  Y_STEP = -0.7
+  Y_STEP = -1.5
   SCALE = 50.0
 
   edges  color:'blue', style:"solid"
@@ -46,15 +46,27 @@ Graph do
     src =     section[:src]   if section.key? :src
     dst =     section[:dst]   if section.key? :dst
     label =   section[:label] if section.key? :label
+    img =     section[:img] if section.key? :img
+    img_dl =  section[:img_dl] if section.key? :img_dl
 
-    rect "label#{i}".to_sym, label:"#{label} #{src}-#{dst}", \
-                             x:(src-200)/SCALE, y:Y_STEP*i, width:5, \
-                             color:"blue", fillcolor:"none", fontname: 'Arial'
+    img_tag =''
+    img_tag = "<IMG SRC=\"#{img}\" SCALE=\"TRUE\" />" if img
+
+    if img_dl
+      require 'open-uri'
+      open(img_dl) {|data|
+        File.open(img, 'w') {|f| f.write data.read}
+      }
+    end
+
+    rect "label#{i}".to_sym, label: "<<TABLE><TR><TD>#{img_tag}</TD><TD>#{label} #{src}-#{dst}</TD></TR></TABLE>>", \
+                             x:(src-200)/SCALE, y:Y_STEP*i, size:"2,2", \
+                             color:"none", fillcolor:"none", fontname: 'Arial'
     dst ||= Time.now.year
     line "bar#{i}".to_sym, from:[src/SCALE,Y_STEP*i], to:[dst/SCALE,Y_STEP*i]
     i+=1
   end
 
 
-  save(:year_table, :png)
+  save(:year_table, :svg)
 end
