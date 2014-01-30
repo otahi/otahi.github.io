@@ -36,7 +36,7 @@ sections =
 
 
 Graph do
-  Y_STEP = -1.5
+  Y_STEP = -1.0
   SCALE = 50.0
 
   edges  color:'blue', style:"solid"
