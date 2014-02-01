@@ -69,7 +69,7 @@ Graph do
       }
     end
 
-    rect "label#{i}".to_sym, label: "<<TABLE><TR><TD>#{img_tag}</TD><TD>#{label} #{src}-#{dst}</TD></TR></TABLE>>", \
+    rect "label#{i}".to_sym, label: "<TABLE><TR><TD>#{img_tag}</TD><TD>#{label} #{src}-#{dst}</TD></TR></TABLE>", \
                              x:(src-200)/SCALE, y:Y_STEP*i, size:"2,2", \
                              color:"none", fillcolor:"none", fontname: 'Arial'
     dst ||= Time.now.year
