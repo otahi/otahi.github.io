@@ -49,7 +49,7 @@ Graph do
   Y_STEP = -1.0
   SCALE = 50.0
 
-  edges  color:'blue', style:"solid"
+  edges  color:'blue', style:"solid", arrowtype:"normal", penwidth:10
 
   i = 0
   sections.each do |section|
@@ -73,7 +73,9 @@ Graph do
                              x:(src-200)/SCALE, y:Y_STEP*i, size:"2,2", \
                              color:"none", fillcolor:"none", fontname: 'Arial'
     dst ||= Time.now.year
-    line "bar#{i}".to_sym, from:[src/SCALE,Y_STEP*i], to:[dst/SCALE,Y_STEP*i]
+    point "from#{i}".to_sym, x:src/SCALE ,y:Y_STEP*i,color:"white"
+    point "to#{i}".to_sym,   x:dst/SCALE ,y:Y_STEP*i,color:"white"
+    route "from#{i}".to_sym => "to#{i}".to_sym
     i+=1
   end
 
