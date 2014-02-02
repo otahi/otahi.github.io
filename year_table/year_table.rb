@@ -25,6 +25,12 @@ sections =
    {src:  570, dst:  632, label: "ムハンマド" },
    {src:  602, dst:  664, label: "玄奘(げんじょう)" },
    {src: 1254, dst: 1324, label: "マルコ・ポーロ" },
+   {
+     src: 1412, dst: 1431, label: "ジャンヌダルク" ,
+     img: "./Joan_of_arc_miniature_graded.jpg",
+     img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Joan_of_arc_miniature_graded.jpg/79px-Joan_of_arc_miniature_graded.jpg",
+     link: "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Joan_of_arc_miniature_graded.jpg"
+   },
    {src: 1420, dst: 1506, label: "雪舟(せっしゅう)" },
    {src: 1451, dst: 1506, label: "コロンブス" },
    {src: 1452, dst: 1519, label: "レオナルド・ダ・ビンチ" },
@@ -32,6 +38,7 @@ sections =
    {src: 1564, dst: 1642, label: "ガリレオ・ガリレイ" },
    {src: 1571, dst: 1630, label: "ヨハネス・ケプラー" },
    {src: 1642, dst: 1727, label: "アイザック・ニュートン" },
+   {src: 1732, dst: 1799, label: "ジョージ・ワシントン" },
    {src: 1738, dst: 1822, label: "ウィリアム・ハーシェル" },
    {src: 1750, dst: 1848, label: "カロライン・ハーシェル" },
    {src: 1787, dst: 1826, label: "ヨセフ・フォン・フラウンホーファー" },
