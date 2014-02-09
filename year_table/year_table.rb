@@ -155,8 +155,16 @@ sections =
    {src: 1810, dst: 1849, label: "フレデリック・フランソワ・ショパン" },
    {src: 1827, dst: 1898, label: "ジョン万次郎(まんじろう)" },
    {src: 1853, dst: 1890, label: "ゴッホ" },
-   {src: 1879, dst: 1955, label: "アインシュタイン" },
-   {src: 1889, dst: 1953, label: "ハッブル" },
+   {src: 1879, dst: 1955, label: "アルバート・アインシュタイン",
+     img: "images/Einstein1921.jpg",
+     img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Einstein1921_by_F_Schmutzer_2.jpg/96px-Einstein1921_by_F_Schmutzer_2.jpg",
+     link: "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Einstein1921_by_F_Schmutzer_2.jpg"
+   },
+   {src: 1889, dst: 1953, label: "ハッブル",
+     img: "images/edwin_powell_hubble_0.jpg",
+     img_dl: "http://static4.quoteswave.com/wp-content/uploads/2012/10/EdwinPowellHubble-150x150.jpg",
+     link: "http://www.quoteswave.com/picture-quotes/259599"
+   },
   ]
 
 

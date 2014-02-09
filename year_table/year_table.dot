@@ -95,10 +95,10 @@ digraph G {
   label30[label=<<TABLE><TR><TD></TD><TD>ゴッホ 1853-1890</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="33.06,-30.0!"];
   from30[color="white",shape="point",pos="37.06,-30.0!"];
   to30[color="white",shape="point",pos="37.8,-30.0!"];
-  label31[label=<<TABLE><TR><TD></TD><TD>アインシュタイン 1879-1955</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="33.58,-31.0!"];
+  label31[label=<<TABLE><TR><TD><IMG SRC="images/Einstein1921.jpg" SCALE="TRUE" /></TD><TD>アルバート・アインシュタイン 1879-1955</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="33.58,-31.0!"];
   from31[color="white",shape="point",pos="37.58,-31.0!"];
   to31[color="white",shape="point",pos="39.1,-31.0!"];
-  label32[label=<<TABLE><TR><TD></TD><TD>ハッブル 1889-1953</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="33.78,-32.0!"];
+  label32[label=<<TABLE><TR><TD><IMG SRC="images/edwin_powell_hubble_0.jpg" SCALE="TRUE" /></TD><TD>ハッブル 1889-1953</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="33.78,-32.0!"];
   from32[color="white",shape="point",pos="37.78,-32.0!"];
   to32[color="white",shape="point",pos="39.06,-32.0!"];
   from0 -> to0;
