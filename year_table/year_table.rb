@@ -202,7 +202,7 @@ sections =
   ]
 
 
-Graph do
+Graph('chronological_table') do
   Y_STEP = -1.0
   SCALE = 50.0
 

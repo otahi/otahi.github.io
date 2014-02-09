@@ -1,4 +1,4 @@
-digraph G {
+digraph chronological_table {
   layout="neato";
   node[style="filled"];
   edge[color="blue",style="solid",arrowtype="normal",penwidth="10"];
