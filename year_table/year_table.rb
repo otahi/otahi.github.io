@@ -160,7 +160,7 @@ sections =
    {src: 1750, dst: 1848, label: "カロライン・ハーシェル",
      img: "images/Herschel_Caroline_1829.jpg",
      img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Herschel_Caroline_1829.jpg/97px-Herschel_Caroline_1829.jpg",
-     img_link: "http://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Herschel_Caroline_1829.jpg/97px-Herschel_Caroline_1829.jpg",
+     img_link: "http://commons.wikimedia.org/wiki/File:Herschel_Caroline_1829.jpg",
      link: "http://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%AD%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%BB%E3%83%8F%E3%83%BC%E3%82%B7%E3%82%A7%E3%83%AB"
    },
    {src: 1787, dst: 1826, label: "ヨセフ・フォン・フラウンホーファー",
@@ -210,13 +210,13 @@ Graph('chronological_table') do
 
   i = 0
   sections.each do |section|
-    src =     section[:src]   if section.key? :src
-    dst =     section[:dst]   if section.key? :dst
-    label =   section[:label] if section.key? :label
-    img =     section[:img] if section.key? :img
-    img_dl =  section[:img_dl] if section.key? :img_dl
-    img_link =  section[:img_link] if section.key? :img_link
-    link =  section[:link] if section.key? :link
+    src =      section[:src]      if section.key? :src
+    dst =      section[:dst]      if section.key? :dst
+    label =    section[:label]    if section.key? :label
+    img =      section[:img]      if section.key? :img
+    img_dl =   section[:img_dl]   if section.key? :img_dl
+    img_link = section[:img_link] if section.key? :img_link
+    link =     section[:link]     if section.key? :link
 
     img_link_attr ="HREF=\"#{img_link}\"" if img_link
     img_tag ="<TD #{img_link_attr}><IMG SRC=\"#{img}\" SCALE=\"TRUE\" /></TD>" if img
