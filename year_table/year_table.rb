@@ -3,7 +3,7 @@ require "gviz"
 
 =begin
     #template
-  ｛
+   {
      src: , dst: , label: "",
      img: "",
      img_dl: "",
@@ -139,17 +139,17 @@ sections =
      img_link: "http://commons.wikimedia.org/wiki/File:Sir_Isaac_Newton_by_Sir_Godfrey_Kneller,_Bt.jpg",
      link: "http://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B6%E3%83%83%E3%82%AF%E3%83%BB%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3"
    },
-   {src: 1732, dst: 1799, label: "ジョージ・ワシントン",
-     img: "images/George_Washington.jpg",
-     img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/100px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg",
-     img_link: "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg",
-     link: "http://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B8%E3%83%BB%E3%83%AF%E3%82%B7%E3%83%B3%E3%83%88%E3%83%B3"
-   },
    {src: 1730, dst: 1817, label: "シャルル・メシエ",
      img: "images/Charles_Messier.jpg",
      img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Charles_Messier.jpg/95px-Charles_Messier.jpg",
      img_link: "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Charles_Messier.jpg",
      link: "http://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AB%E3%83%BB%E3%83%A1%E3%82%B7%E3%82%A8"
+   },
+   {src: 1732, dst: 1799, label: "ジョージ・ワシントン",
+     img: "images/George_Washington.jpg",
+     img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/100px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg",
+     img_link: "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg",
+     link: "http://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B8%E3%83%BB%E3%83%AF%E3%82%B7%E3%83%B3%E3%83%88%E3%83%B3"
    },
    {src: 1738, dst: 1822, label: "ウィリアム・ハーシェル",
      img: "images/William_Herschel01.jpg",
@@ -198,6 +198,27 @@ sections =
      img_dl: "http://static4.quoteswave.com/wp-content/uploads/2012/10/EdwinPowellHubble-150x150.jpg",
      img_link: "http://www.quoteswave.com/picture-quotes/259599",
      link: "http://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%89%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%BB%E3%83%8F%E3%83%83%E3%83%96%E3%83%AB"
+   },
+   {
+     src: 1900, dst: 1992, label: "ヤン・オールト",
+     img: "images/oort.jpg",
+     img_dl: "http://www.sciencephoto.com/image/c0166227/thumb",
+     img_link: "http://search.ppsimages.co.jp/cgi-bin/search.cgi?keyword_and=%E3%83%A4%E3%83%B3%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%AB%E3%83%88",
+     link: "http://ja.wikipedia.org/wiki/%E3%83%A4%E3%83%B3%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%AB%E3%83%88"
+   },
+   {
+     src: 1920, dst: 2010, label: "林忠四郎",
+     img: "images/hayashi.jpg",
+     img_dl: "http://www.worldtimes.co.jp/today/photonews/100302/s100302-11.jpg",
+     img_link: "http://www.worldtimes.co.jp/today/photonews/100302/100302-11.html",
+     link: "http://ja.wikipedia.org/wiki/%E6%9E%97%E5%BF%A0%E5%9B%9B%E9%83%8E"
+   },
+   {
+     src: 1926, dst: nil, label: "小柴昌俊",
+     img: "images/koshiba.jpg",
+     img_dl: "http://www.space-park.jp/events/exhibition/2004/1003/img01.jpg",
+     img_link: "http://www.space-park.jp/events/exhibition/2004/1003/",
+     link: "http://ja.wikipedia.org/wiki/%E5%B0%8F%E6%9F%B4%E6%98%8C%E4%BF%8A"
    },
   ]
 

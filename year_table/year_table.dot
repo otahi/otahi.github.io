@@ -65,12 +65,12 @@ digraph chronological_table {
   label20[label=<<TABLE><TR><TD HREF="http://commons.wikimedia.org/wiki/File:Sir_Isaac_Newton_by_Sir_Godfrey_Kneller,_Bt.jpg"><IMG SRC="images/Isaac_Newton_1702.jpg" SCALE="TRUE" /></TD><TD HREF="http://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B6%E3%83%83%E3%82%AF%E3%83%BB%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3">アイザック・ニュートン 1642 - 1727</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="28.84,-20.0!"];
   from20[color="white",shape="point",pos="32.84,-20.0!"];
   to20[color="white",shape="point",pos="34.54,-20.0!"];
-  label21[label=<<TABLE><TR><TD HREF="http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"><IMG SRC="images/George_Washington.jpg" SCALE="TRUE" /></TD><TD HREF="http://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B8%E3%83%BB%E3%83%AF%E3%82%B7%E3%83%B3%E3%83%88%E3%83%B3">ジョージ・ワシントン 1732 - 1799</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="30.64,-21.0!"];
-  from21[color="white",shape="point",pos="34.64,-21.0!"];
-  to21[color="white",shape="point",pos="35.98,-21.0!"];
-  label22[label=<<TABLE><TR><TD HREF="http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Charles_Messier.jpg"><IMG SRC="images/Charles_Messier.jpg" SCALE="TRUE" /></TD><TD HREF="http://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AB%E3%83%BB%E3%83%A1%E3%82%B7%E3%82%A8">シャルル・メシエ 1730 - 1817</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="30.6,-22.0!"];
-  from22[color="white",shape="point",pos="34.6,-22.0!"];
-  to22[color="white",shape="point",pos="36.34,-22.0!"];
+  label21[label=<<TABLE><TR><TD HREF="http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Charles_Messier.jpg"><IMG SRC="images/Charles_Messier.jpg" SCALE="TRUE" /></TD><TD HREF="http://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AB%E3%83%BB%E3%83%A1%E3%82%B7%E3%82%A8">シャルル・メシエ 1730 - 1817</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="30.6,-21.0!"];
+  from21[color="white",shape="point",pos="34.6,-21.0!"];
+  to21[color="white",shape="point",pos="36.34,-21.0!"];
+  label22[label=<<TABLE><TR><TD HREF="http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"><IMG SRC="images/George_Washington.jpg" SCALE="TRUE" /></TD><TD HREF="http://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B8%E3%83%BB%E3%83%AF%E3%82%B7%E3%83%B3%E3%83%88%E3%83%B3">ジョージ・ワシントン 1732 - 1799</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="30.64,-22.0!"];
+  from22[color="white",shape="point",pos="34.64,-22.0!"];
+  to22[color="white",shape="point",pos="35.98,-22.0!"];
   label23[label=<<TABLE><TR><TD HREF="http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:William_Herschel01.jpg"><IMG SRC="images/William_Herschel01.jpg" SCALE="TRUE" /></TD><TD HREF="http://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A3%E3%83%AA%E3%82%A2%E3%83%A0%E3%83%BB%E3%83%8F%E3%83%BC%E3%82%B7%E3%82%A7%E3%83%AB">ウィリアム・ハーシェル 1738 - 1822</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="30.76,-23.0!"];
   from23[color="white",shape="point",pos="34.76,-23.0!"];
   to23[color="white",shape="point",pos="36.44,-23.0!"];
@@ -101,6 +101,15 @@ digraph chronological_table {
   label32[label=<<TABLE><TR><TD HREF="http://www.quoteswave.com/picture-quotes/259599"><IMG SRC="images/edwin_powell_hubble_0.jpg" SCALE="TRUE" /></TD><TD HREF="http://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%89%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%BB%E3%83%8F%E3%83%83%E3%83%96%E3%83%AB">ハッブル 1889 - 1953</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="33.78,-32.0!"];
   from32[color="white",shape="point",pos="37.78,-32.0!"];
   to32[color="white",shape="point",pos="39.06,-32.0!"];
+  label33[label=<<TABLE><TR><TD HREF="http://search.ppsimages.co.jp/cgi-bin/search.cgi?keyword_and=%E3%83%A4%E3%83%B3%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%AB%E3%83%88"><IMG SRC="images/oort.jpg" SCALE="TRUE" /></TD><TD HREF="http://ja.wikipedia.org/wiki/%E3%83%A4%E3%83%B3%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%AB%E3%83%88">ヤン・オールト 1900 - 1992</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="34.0,-33.0!"];
+  from33[color="white",shape="point",pos="38.0,-33.0!"];
+  to33[color="white",shape="point",pos="39.84,-33.0!"];
+  label34[label=<<TABLE><TR><TD HREF="http://www.worldtimes.co.jp/today/photonews/100302/100302-11.html"><IMG SRC="images/hayashi.jpg" SCALE="TRUE" /></TD><TD HREF="http://ja.wikipedia.org/wiki/%E6%9E%97%E5%BF%A0%E5%9B%9B%E9%83%8E">林忠四郎 1920 - 2010</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="34.4,-34.0!"];
+  from34[color="white",shape="point",pos="38.4,-34.0!"];
+  to34[color="white",shape="point",pos="40.2,-34.0!"];
+  label35[label=<<TABLE><TR><TD HREF="http://www.space-park.jp/events/exhibition/2004/1003/"><IMG SRC="images/koshiba.jpg" SCALE="TRUE" /></TD><TD HREF="http://ja.wikipedia.org/wiki/%E5%B0%8F%E6%9F%B4%E6%98%8C%E4%BF%8A">小柴昌俊 1926 -</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="34.52,-35.0!"];
+  from35[color="white",shape="point",pos="38.52,-35.0!"];
+  to35[color="white",shape="point",pos="40.28,-35.0!"];
   from0 -> to0;
   from1 -> to1;
   from2 -> to2;
@@ -134,4 +143,7 @@ digraph chronological_table {
   from30 -> to30;
   from31 -> to31;
   from32 -> to32;
+  from33 -> to33;
+  from34 -> to34;
+  from35 -> to35;
 }
