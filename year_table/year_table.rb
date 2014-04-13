@@ -78,7 +78,7 @@ sections =
      img_link: "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Xuanzang_w.jpg",
      link: "http://ja.wikipedia.org/wiki/%E7%8E%84%E5%A5%98%E4%B8%89%E8%94%B5"
    },
-   {src: 1162, dst: 1272, label: "チンギス・ハン" ,
+   {src: 1162, dst: 1227, label: "チンギス・ハン" ,
      img: "images/Dschingis_Khan.jpg",
      img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/3/35/YuanEmperorAlbumGenghisPortrait.jpg/94px-YuanEmperorAlbumGenghisPortrait.jpg",
      img_link: "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:YuanEmperorAlbumGenghisPortrait.jpg",
@@ -89,6 +89,12 @@ sections =
      img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Marco_Polo_portrait.jpg/89px-Marco_Polo_portrait.jpg",
      img_link: "http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Marco_Polo_portrait.jpg",
      link: "http://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%BB%E3%83%9D%E3%83%BC%E3%83%AD"
+   },
+   {src: 1305, dst: 1358, label: "足利尊氏" ,
+     img: "images/Ashikaga_Takauji.jpg",
+     img_dl: "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ashikaga_Takauji_J%C5%8Ddo-ji.jpg/120px-Ashikaga_Takauji_J%C5%8Ddo-ji.jpg",
+     img_link: "http://upload.wikimedia.org/wikipedia/commons/8/83/Ashikaga_Takauji_J%C5%8Ddo-ji.jpg",
+     link: "http://ja.wikipedia.org/wiki/%E8%B6%B3%E5%88%A9%E5%B0%8A%E6%B0%8F"
    },
    {
      src: 1412, dst: 1431, label: "ジャンヌダルク" ,
