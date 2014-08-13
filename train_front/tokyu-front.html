@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tokyu Line</title>
+    <script>//<![CDATA[
+      function getKind() {
+        return document.getElementById("train_form").kind.value;
+      }
+      function getKinds() {
+        return {
+                     express:     {fgcolor: "white", bgcolor: "red",   string: "急行"},
+                     semiexpress: {fgcolor: "white", bgcolor: "lime",  string: "準急"},
+                     greenlocal:  {fgcolor: "green", bgcolor: "white", string: "各停"},
+                     bluelocal:   {fgcolor: "white", bgcolor: "blue",  string: "各停"}
+        };
+      }
+      function getKindString() {
+        var kinds = getKinds();
+        return kinds[getKind()]["string"];
+      }
+      function getKindFgColor() {
+        var kinds = getKinds();
+        return kinds[getKind()]["fgcolor"];
+      }
+      function getKindBgColor() {
+        var kinds = getKinds();
+        return kinds[getKind()]["bgcolor"];
+      }
+      function getDest() {
+        return document.getElementById("train_form").dest.value;
+      }
+      function changeKind() {
+        var svg = document.getElementById("train").getSVGDocument();
+
+        var kind = getKind()
+        svg.getElementById("kind_string").firstChild.firstChild.nodeValue = getKindString();
+        svg.getElementById("kind_string").firstChild.style.fill = getKindFgColor();
+        svg.getElementById("kind_bg").style.fill = getKindBgColor();
+        svg.getElementById("kind_bg").style.stroke = getKindFgColor();
+        svg.getElementById("kind_bg").style.strokeWidth = 3;
+        svg.getElementById("kind_bg").style.strokeDashArray = 20;
+      }
+      function changeDest() {
+        var svg = document.getElementById("train").getSVGDocument();
+        var dest = getDest();//document.getElementById("train_form").dest.value;
+        svg.getElementById("dest_string").firstChild.firstChild.nodeValue = dest;
+        var fontSize = 28;
+        svg.getElementById("dest_string").firstChild.style.fontSize = fontSize;
+      }
+      function moveWiper() {
+        var svg = document.getElementById("train").getSVGDocument();
+        var wipe = '<animateMotion path="M10,0 100,0 10,0" dur="1s" repeatCount="indefinite" />';
+        svg.getElementById("wiper").innerHTML = wipe;
+      }
+      function changeCar() {
+        var car = document.getElementById("train_form").car.value;
+        document.getElementById("train").setAttribute("src", car + ".svg");
+        document.getElementById("train").style.display = "none";
+        document.getElementById("train").style.display = "block";
+        initCar();
+      }
+      function initCar() {
+        var car = document.getElementById("train_form").car.value;
+        document.getElementById("train").setAttribute("src", car + ".svg");
+        document.getElementById("train").onload = initCar;
+        changeKind();
+        changeDest();
+        //moveWiper();
+      }
+      function playTts() {
+        var message = "この電車は" + getKindString() + "行きです。"
+        var encodedMessage = encodeURIComponent(message);
+        var tts_src = "http://translate.google.com/translate_tts?tl=ja&q=" + encodedMessage;
+        document.getElementById("tts").setAttribute("src", tts_src);
+      }
+      window.onload = initCar;
+      //]]>
+    </script>
+  </head>
+  <body>
+    <form id="train_form">
+      <div style="font-size: 32pt">
+      車両：
+        <select name="car" onchange="changeCar()">
+          <option value="tokyu-2000-front" selected="slected">2000系</option>
+          <option value="oimachi-line-express-front">6000系</option>
+        </select>
+      種別：
+        <select name="kind" onchange="changeKind()">
+          <option value="express">急行</option>
+          <option value="semiexpress" selected="slected">準急</option>
+          <option value="greenlocal">各停</option>
+          <option value="bluelocal">各停</option>
+        </select>
+      行き先：
+        <select name="dest" onchange="changeDest()">
+          <option value="中央林間" selected="slected">中央林間</option>
+          <option value="長津田">長津田</option>
+          <option value="梶が谷">梶が谷</option>
+          <option value="押上">押上</option>
+          <option value="久喜">久喜</option>
+          <option value="南栗橋">南栗橋</option>
+          <option value="鷺沼">鷺沼</option>
+          <option value="溝の口">溝の口</option>
+          <option value="大井町">大井町</option>
+          <option value="大岡山">大岡山</option>
+        </select>
+        <button type="button" name="next" value="next" onclick="playTts()">Play</button>
+      </div>
+    </form>
+    <embed src="tokyu-2000-front.svg" type="image/svg+xml" id="train" />
+    <div display="none">
+      <iframe id="tts" style="display:none" />
+    </div>
+    <div stydisplay="none" id="trail" onload="changeCar()">
+  </body>
+</html>
