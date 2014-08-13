@@ -46,7 +46,7 @@
         var svg = document.getElementById("train").getSVGDocument();
         var dest = getDest();//document.getElementById("train_form").dest.value;
         svg.getElementById("dest_string").firstChild.firstChild.nodeValue = dest;
-        var fontSize = 44 / dest.length * 3;
+        var fontSize = 40 / dest.length * 3;
         svg.getElementById("dest_string").firstChild.style.fontSize = fontSize;
       }
       function moveWiper() {
