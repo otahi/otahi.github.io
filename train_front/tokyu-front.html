@@ -46,7 +46,7 @@
         var svg = document.getElementById("train").getSVGDocument();
         var dest = getDest();//document.getElementById("train_form").dest.value;
         svg.getElementById("dest_string").firstChild.firstChild.nodeValue = dest;
-        var fontSize = 28;
+        var fontSize = 44 / dest.length * 3;
         svg.getElementById("dest_string").firstChild.style.fontSize = fontSize;
       }
       function moveWiper() {
@@ -70,7 +70,7 @@
         //moveWiper();
       }
       function playTts() {
-        var message = "この電車は" + getKindString() + "行きです。"
+        var message = "この電車は" + getKindString() + getDestString() + "行きです。"
         var encodedMessage = encodeURIComponent(message);
         var tts_src = "http://translate.google.com/translate_tts?tl=ja&q=" + encodedMessage;
         document.getElementById("tts").setAttribute("src", tts_src);
