@@ -70,7 +70,7 @@
         //moveWiper();
       }
       function playTts() {
-        var message = "この電車は" + getKindString() + getDestString() + "行きです。"
+        var message = "この電車は" + getKindString() + getDest() + "行きです。"
         var encodedMessage = encodeURIComponent(message);
         var tts_src = "http://translate.google.com/translate_tts?tl=ja&q=" + encodedMessage;
         document.getElementById("tts").setAttribute("src", tts_src);
