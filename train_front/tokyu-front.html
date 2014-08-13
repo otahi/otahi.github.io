@@ -12,7 +12,8 @@
                      express:     {fgcolor: "white", bgcolor: "red",   string: "急行"},
                      semiexpress: {fgcolor: "white", bgcolor: "lime",  string: "準急"},
                      greenlocal:  {fgcolor: "green", bgcolor: "white", string: "各停"},
-                     bluelocal:   {fgcolor: "white", bgcolor: "blue",  string: "各停"}
+                     bluelocal:   {fgcolor: "white", bgcolor: "blue",  string: "各停"},
+                     local:       {fgcolor: "white", bgcolor: "black", string: "各停"}
         };
       }
       function getKindString() {
@@ -85,6 +86,7 @@
         <select name="car" onchange="changeCar()">
           <option value="tokyu-2000-front" selected="slected">2000系</option>
           <option value="oimachi-line-express-front">6000系</option>
+          <option value="tokyu-9000-front" selected="slected">9000系</option>
         </select>
       種別：
         <select name="kind" onchange="changeKind()">
@@ -92,6 +94,7 @@
           <option value="semiexpress" selected="slected">準急</option>
           <option value="greenlocal">各停</option>
           <option value="bluelocal">各停</option>
+          <option value="local">各停</option>
         </select>
       行き先：
         <select name="dest" onchange="changeDest()">
@@ -104,6 +107,7 @@
           <option value="鷺沼">鷺沼</option>
           <option value="溝の口">溝の口</option>
           <option value="大井町">大井町</option>
+          <option value="自由が丘">自由が丘</option>
           <option value="大岡山">大岡山</option>
         </select>
         <button type="button" name="next" value="next" onclick="playTts()">Play</button>
