@@ -73,7 +73,12 @@
         var message = "この電車は" + getKindString() + getDest() + "行きです。"
         var encodedMessage = encodeURIComponent(message);
         var tts_src = "http://translate.google.com/translate_tts?tl=ja&q=" + encodedMessage;
-        document.getElementById("tts").setAttribute("src", tts_src);
+        var audio = new Audio(tts_src);
+        audio.play();
+      }
+      function playSound(sound) {
+        var audio = new Audio("audio/"+ sound + ".mp3");
+        audio.play();
       }
       window.onload = initCar;
       //]]>
@@ -110,13 +115,16 @@
           <option value="自由が丘">自由が丘</option>
           <option value="大岡山">大岡山</option>
         </select>
-        <button type="button" name="next" value="next" onclick="playTts()">Play</button>
+        <button type="button" name="next" value="next" onclick="playTts()">行き先</button>
+        <button type="button" name="slow_train" value="slow_train" onclick="playSound(this.value)">ゆっくり走る</button>
+        <button type="button" name="fast_train" value="fast_train" onclick="playSound(this.value)">速く走る</button>
       </div>
     </form>
     <embed src="tokyu-2000-front.svg" type="image/svg+xml" id="train" />
     <div display="none">
       <iframe id="tts" style="display:none" />
     </div>
+    <a href="http://www.senses-circuit.com/">音源：フリー音楽素材 Senses Circuit</a>
     <div stydisplay="none" id="trail" onload="changeCar()">
   </body>
 </html>
