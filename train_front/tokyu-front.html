@@ -3,6 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <title>Tokyu Line</title>
+    <style>
+      select{
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        border-radius:6px;
+        width: 200px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+        text-indent: 1em;
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+        background:#888888 url(down-arrow.svg) no-repeat;
+        background-size:40px 60px;
+        background-position: right center;
+        content: "Background tex"
+      }
+      button{
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        width: 200px;
+        height: 60px;
+        line-height: 60px;
+        color: #FFFFFF;
+        font-size: 20px;
+        background:#888888 no-repeat;
+        background-size:40px 60px;
+      }
+    </style>
     <script>//<![CDATA[
       function getKind() {
         return document.getElementById("train_form").kind.value;
@@ -86,7 +118,7 @@
   </head>
   <body>
     <form id="train_form">
-      <div style="font-size: 32pt">
+      <div>
       車両：
         <select name="car" onchange="changeCar()">
           <option value="tokyu-2000-front" selected="slected">2000系</option>
@@ -115,9 +147,11 @@
           <option value="自由が丘">自由が丘</option>
           <option value="大岡山">大岡山</option>
         </select>
+        <br>
         <button type="button" name="next" value="next" onclick="playTts()">行き先</button>
         <button type="button" name="slow_train" value="slow_train" onclick="playSound(this.value)">ゆっくり走る</button>
         <button type="button" name="fast_train" value="fast_train" onclick="playSound(this.value)">速く走る</button>
+        <button type="button" name="crossing" value="crossing" onclick="playSound(this.value)">踏切</button>
       </div>
     </form>
     <embed src="tokyu-2000-front.svg" type="image/svg+xml" id="train" />
