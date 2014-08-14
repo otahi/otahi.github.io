@@ -22,6 +22,17 @@
   <defs
      id="defs4">
     <linearGradient
+       id="linearGradient7821">
+      <stop
+         style="stop-color:#c53c00;stop-opacity:1;"
+         offset="0"
+         id="stop7823" />
+      <stop
+         style="stop-color:#b5c500;stop-opacity:0.99145299;"
+         offset="1"
+         id="stop7825" />
+    </linearGradient>
+    <linearGradient
        id="linearGradient3838">
       <stop
          style="stop-color:#ff0f00;stop-opacity:0.24705882;"
@@ -39,6 +50,15 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 591.08948 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7821"
+       id="linearGradient7827"
+       x1="196.03072"
+       y1="672.97571"
+       x2="196.87569"
+       y2="760.00659"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -47,9 +67,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.41842618"
-     inkscape:cx="606.26845"
-     inkscape:cy="197.64657"
+     inkscape:zoom="1.183488"
+     inkscape:cx="369.67964"
+     inkscape:cy="299.04177"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -101,7 +121,7 @@
        d="m 553.47841,391.15884 c 0,24.32872 -117.06155,44.05105 -261.46428,44.05105 -144.40273,0 -261.464273,-19.72233 -261.464273,-44.05105 0,-24.32873 117.061543,-44.05105 261.464273,-44.05105 144.40273,0 261.46428,19.72232 261.46428,44.05105 z m -520.130344,-3.56992 517.332174,0 c 1.55021,0 2.79821,1.248 2.79821,2.79821 l 0,463.33405 c 0,1.5502 -1.248,2.79821 -2.79821,2.79821 l -517.332174,0 c -1.550208,0 -2.79821,-1.24801 -2.79821,-2.79821 l 0,-463.33405 c 0,-1.55021 1.248002,-2.79821 2.79821,-2.79821 z"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       style="fill:url(#linearGradient7827);fill-opacity:1;stroke:none"
        id="rect5019"
        width="521.50763"
        height="90.944107"
