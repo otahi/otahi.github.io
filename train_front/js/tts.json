@@ -1,0 +1,11 @@
+{
+    "general": {
+        "kind_general_lead": "この電車は",
+        "dest_general_trail": "行きです。",
+        "next_lead": "次は",
+        "next_trail": "に止まります。",
+        "soon_lead": "まもなく",
+        "soon_trail": "です。",
+        "change_tail": "わ、お乗り換えです。"
+    }
+}

@@ -17,7 +17,7 @@
         color: #FFFFFF;
         border: none;
         cursor: pointer;
-        background:#888888 url(down-arrow.svg) no-repeat;
+        background:#888888 url(img/down-arrow.svg) no-repeat;
         background-size:40px 60px;
         background-position: right center;
         content: "Background tex"
@@ -35,7 +35,23 @@
         background-size:40px 60px;
       }
     </style>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script>//<![CDATA[
+      var tts;
+      var kind;
+      var station;
+      $(document).ready(function(){
+        $.getJSON("js/tts.json", function(data){
+          tts = data;
+        });
+        $.getJSON("js/kind.json", function(data){
+          kind = data;
+        });
+        $.getJSON("js/station.json", function(data){
+          station = data;
+        });
+        initCar();
+      });
       function getKind() {
         return document.getElementById("train_form").kind.value;
       }
@@ -63,10 +79,14 @@
       function getDest() {
         return document.getElementById("train_form").dest.value;
       }
+      function getDestString() {
+        return station[getDest()];
+      }
       function changeKind() {
         var svg = document.getElementById("train").getSVGDocument();
+        if (svg == null) return;
 
-        var kind = getKind()
+        var kind = getKind();
         svg.getElementById("kind_string").firstChild.firstChild.nodeValue = getKindString();
         svg.getElementById("kind_string").firstChild.style.fill = getKindFgColor();
         svg.getElementById("kind_bg").style.fill = getKindBgColor();
@@ -76,7 +96,8 @@
       }
       function changeDest() {
         var svg = document.getElementById("train").getSVGDocument();
-        var dest = getDest();//document.getElementById("train_form").dest.value;
+        if (svg == null) return;
+        var dest = getDestString();
         svg.getElementById("dest_string").firstChild.firstChild.nodeValue = dest;
         var fontSize = 40 / dest.length * 3;
         svg.getElementById("dest_string").firstChild.style.fontSize = fontSize;
@@ -101,18 +122,31 @@
         changeDest();
         //moveWiper();
       }
-      function playTts() {
-        var message = "この電車は" + getKindString() + getDest() + "行きです。"
-        var encodedMessage = encodeURIComponent(message);
-        var tts_src = "http://translate.google.com/translate_tts?tl=ja&q=" + encodedMessage;
-        var audio = new Audio(tts_src);
-        audio.play();
-      }
       function playSound(sound) {
         var audio = new Audio("audio/"+ sound + ".mp3");
         audio.play();
       }
-      window.onload = initCar;
+      function playSounds(snd) {
+        sounds = snd;
+        current = 0 ;
+        var audio = new Audio("audio/"+ sounds[current] + ".mp3");
+        audio.play();
+
+        audio.addEventListener('ended',function(e){
+          current++;
+          if(current < sounds.length) {
+            source = "audio/" + sounds[current] + ".mp3";
+            this.src = source
+            this.pause();
+            this.load();
+            this.play();
+          }
+        });
+      }
+      function sayDeparture() {
+        var message = ["kind_general_lead","kind_" + getKind(), getDest(), "dest_general_trail"];
+        playSounds(message);
+      }
       //]]>
     </script>
   </head>
@@ -135,23 +169,23 @@
         </select>
       行き先：
         <select name="dest" onchange="changeDest()">
-          <option value="中央林間" selected="slected">中央林間</option>
-          <option value="長津田">長津田</option>
-          <option value="梶が谷">梶が谷</option>
-          <option value="押上">押上</option>
-          <option value="久喜">久喜</option>
-          <option value="南栗橋">南栗橋</option>
-          <option value="鷺沼">鷺沼</option>
-          <option value="溝の口">溝の口</option>
-          <option value="大井町">大井町</option>
-          <option value="自由が丘">自由が丘</option>
-          <option value="大岡山">大岡山</option>
+          <option value="DT27" selected="slected">中央林間</option>
+          <option value="DT22" name="長津田" >長津田</option>
+          <option value="DT11" name="">梶が谷</option>
+          <option value="TS03">押上</option>
+          <option value="TI02">久喜</option>
+          <option value="TN03">南栗橋</option>
+          <option value="DT14">鷺沼</option>
+          <option value="OM16">溝の口</option>
+          <option value="OM01">大井町</option>
+          <option value="OM10">自由が丘</option>
+          <option value="OM08">大岡山</option>
         </select>
         <br>
-        <button type="button" name="next" value="next" onclick="playTts()">行き先</button>
         <button type="button" name="slow_train" value="slow_train" onclick="playSound(this.value)">ゆっくり走る</button>
         <button type="button" name="fast_train" value="fast_train" onclick="playSound(this.value)">速く走る</button>
         <button type="button" name="crossing" value="crossing" onclick="playSound(this.value)">踏切</button>
+        <button type="button" name="say_departure" value="" onclick="sayDeparture()">出発</button>
       </div>
     </form>
     <embed src="tokyu-2000-front.svg" type="image/svg+xml" id="train" />
