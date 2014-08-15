@@ -135,7 +135,9 @@
           $("#audios").append(audios[i]);
           if( i +1 < sounds.length ) {
             audios[i].addEventListener('ended',function(e){
+              this.pause();
               next++;
+              audios[next].load();
               audios[next].play();
             });
           }
