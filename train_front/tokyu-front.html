@@ -132,29 +132,20 @@
         next = 0 ;
         for(i = 0 ; i < sounds.length ; i++) {
           audios[i] = new Audio("audio/"+ sounds[i] + ".mp3");
+          $("#audios").append(audios[i]);
           if( i +1 < sounds.length ) {
             audios[i].addEventListener('ended',function(e){
               next++;
-              audios[next].pause();
-              audios[next].load();
               audios[next].play();
+            });
+          }
+          else {
+            audios[i].addEventListener('ended',function(e){
+              $("#audios").empty();
             });
           };
         };
-audios[0].play();
-//        var audio = new Audio("audio/"+ sounds[current] + ".mp3");
-//        audio.play();
-// 
-//        audio.addEventListener('ended',function(e){
-//          current++;
-//          if(current < sounds.length) {
-//            source = "audio/" + sounds[current] + ".mp3";
-//            this.src = source
-//            this.pause();
-//            this.load();
-//            this.play();
-//          }
-//        });
+        audios[0].play();
       }
       function sayDeparture() {
         var message = ["kind_general_lead","kind_" + getKind(), getDest(), "dest_general_trail"];
@@ -202,10 +193,7 @@ audios[0].play();
       </div>
     </form>
     <embed src="tokyu-2000-front.svg" type="image/svg+xml" id="train" />
-    <div display="none">
-      <iframe id="tts" style="display:none" />
-    </div>
-    <a href="http://www.senses-circuit.com/">音源：フリー音楽素材 Senses Circuit</a>
-    <div stydisplay="none" id="trail" onload="changeCar()">
+    <div style="display: none" id="audios"></div>
+    <div><a href="http://www.senses-circuit.com/">音源：フリー音楽素材 Senses Circuit</a></div>
   </body>
 </html>
