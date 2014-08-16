@@ -1,0 +1,13 @@
+[
+    { "station": "DT01", "change": "DT01_change" },
+    { "station": "DT03", "change": "DT03_change" },
+    { "station": "DT07", "change": "DT07_change" },
+    { "station": "OM16", "change": "OM16_change" },
+    { "station": "DT14" },
+    { "station": "DT15" },
+    { "station": "DT16",  "change": "DT16_change" },
+    { "station": "DT20" },
+    { "station": "DT22", "change": "DT22_change" },
+    { "station": "DT25" },
+    { "station": "DT27", "change": "DT27_change" }
+]
