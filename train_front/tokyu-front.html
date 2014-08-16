@@ -170,8 +170,8 @@
       行き先：
         <select name="dest" onchange="changeDest()">
           <option value="DT27" selected="slected">中央林間</option>
-          <option value="DT22" name="長津田" >長津田</option>
-          <option value="DT11" name="">梶が谷</option>
+          <option value="DT22">長津田</option>
+          <option value="DT11">梶が谷</option>
           <option value="TS03">押上</option>
           <option value="TI02">久喜</option>
           <option value="TN03">南栗橋</option>
@@ -185,6 +185,8 @@
         <button type="button" name="slow_train" value="slow_train" onclick="playSound(this.value)">ゆっくり走る</button>
         <button type="button" name="fast_train" value="fast_train" onclick="playSound(this.value)">速く走る</button>
         <button type="button" name="crossing" value="crossing" onclick="playSound(this.value)">踏切</button>
+        <button type="button" name="close" value="close" onclick="playSound(this.value)">close</button>
+        <button type="button" name="open" value="open" onclick="playSound(this.value)">open</button>
         <button type="button" name="say_departure" value="" onclick="sayDeparture()">出発</button>
       </div>
     </form>
