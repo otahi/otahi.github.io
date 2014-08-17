@@ -121,6 +121,30 @@
         };
         return direction[getDest()];
       }
+      function getSource() {
+        var source = {
+           "OM" : {
+             "DT27": "OM01",
+             "DT22": "OM01",
+             "DT11": "OM01",
+             "DT14": "OM01",
+             "OM16": "OM01",
+             "OM01": "OM16",
+             "OM10": "OM01",
+             "OM08": "OM01"
+          },
+          "DT": {
+             "DT27": "DT01",
+             "DT22": "DT01",
+             "DT11": "DT01",
+             "TS03": "DT27",
+             "TI02": "DT27",
+             "TN03": "DT27",
+             "DT14": "DT01"
+          } 
+        };
+        return source[getLine()][getDest()];
+      }
       function changeKind() {
         var svg = document.getElementById("train").getSVGDocument();
         if (svg == null) return;
@@ -182,7 +206,15 @@
           }
         });
       }
-      function sayDeparture() {
+      function findStation(station){
+        var index = 0;
+        order.forEach(function(value, i) {
+          if(value["station"] == station) {
+            index = i;
+            return;
+          }
+        });
+        return index;
       }
       var order = new Array();
       var preLineKind = '';
@@ -193,17 +225,19 @@
         if(lineKind != preLineKind || order.length == 0)  {
           preLineKind = lineKind;
           $.getJSON("js/"+ lineKind + ".json", function(data){
-           order = data;
+            order = data;
+            next = findStation(getSource());
+            sayNext();
           });
         };
         if(order.length > 0){
           if(next < 0){
-            next += order.length -1;
+            next = findStation(getSource());
           };
           if(next >= order.length){
-            next = 0;
+            next = findStation(getSource());
           };
-          if(next == 0 && getDest() != order[next]["station"]){
+          if(next == 0 && ( getDest() != order[next]["station"] )){
             var message = ["kind_general_lead","kind_" + getKind(), getDest(), "dest_general_trail"];
             playSounds(message);
             next += getDirection();
@@ -217,7 +251,7 @@
               playSounds(["soon_lead", order[next]["station"], "soon_trail"]);
             };
             if(getDest() == order[next]["station"]){
-              next = 0;
+              next = findStation(getSource());;
               return;
             };
             next += getDirection();
@@ -274,5 +308,6 @@
       <div style="display: none" id="audios"></div>
     </div>
     <div><a href="http://www.senses-circuit.com/">音源：フリー音楽素材 Senses Circuit</a></div>
+    <div><a href="http://open-jtalk.sourceforge.net/">音声：Open JTalk</a></div>
   </body>
 </html>
