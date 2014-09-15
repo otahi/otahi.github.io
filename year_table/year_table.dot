@@ -92,7 +92,7 @@ digraph chronological_table {
   label29[label=<<TABLE><TR><TD HREF="http://ja.wikipedia.org/wiki/%E3%83%95%E3%83%AC%E3%83%87%E3%83%AA%E3%83%83%E3%82%AF%E3%83%BB%E3%82%B7%E3%83%A7%E3%83%91%E3%83%B3">フレデリック・フランソワ・ショパン 1810 - 1849</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="32.2,-29.0!"];
   from29[color="white",shape="point",pos="36.2,-29.0!"];
   to29[color="white",shape="point",pos="36.98,-29.0!"];
-  label30[label=<<TABLE><TR><TD HREF="http://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E4%B8%87%E6%AC%A1%E9%83%8E">ジョン万次郎(まんじろう) 1827 - 1898</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="32.54,-30.0!"];
+  label30[label=<<TABLE><TR><TD HREF="http://commons.wikimedia.org/wiki/Category:Nakahama_Manjir%C5%8D#mediaviewer/File:Nakahama_John_Manjir%C5%8D.jpg"><IMG SRC="images/John_Manjiro_1921.jpg" SCALE="TRUE" /></TD><TD HREF="http://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E4%B8%87%E6%AC%A1%E9%83%8E">ジョン万次郎(まんじろう) 1827 - 1898</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="32.54,-30.0!"];
   from30[color="white",shape="point",pos="36.54,-30.0!"];
   to30[color="white",shape="point",pos="37.96,-30.0!"];
   label31[label=<<TABLE><TR><TD HREF="http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A3%E3%83%B3%E3%82%BB%E3%83%B3%E3%83%88%E3%83%BB%E3%83%95%E3%82%A1%E3%83%B3%E3%83%BB%E3%82%B4%E3%83%83%E3%83%9B">フィンセント・ファン・ゴッホ 1853 - 1890</TD></TR></TABLE>>,color="none",fillcolor="none",size="2,2",fontname="Arial",shape="rect",pos="33.06,-31.0!"];
