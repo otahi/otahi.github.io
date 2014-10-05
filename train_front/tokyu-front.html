@@ -71,6 +71,7 @@
         var lines = {
           "tokyu-2000-front": "DT",
           "oimachi-line-express-front": "OM",
+          "tokyu-8090-front": "DT"
           "tokyu-9000-front": "OM"
         };
         return lines[getCar()];
@@ -271,6 +272,7 @@
           <select name="car" onchange="changeCar()">
             <option value="tokyu-2000-front" selected="slected">2000系</option>
             <option value="oimachi-line-express-front">6000系</option>
+            <option value="tokyu-8090-front">8090系</option>
             <option value="tokyu-9000-front">9000系</option>
           </select>
           <select name="kind" onchange="changeKind()">
@@ -291,6 +293,7 @@
             <option value="OM16">溝の口</option>
             <option value="OM01">大井町</option>
             <option value="OM10">自由が丘</option>
+            <option value="Z11">清澄白河</option>
             <option value="OM08">大岡山</option>
           </select>
           <br>
