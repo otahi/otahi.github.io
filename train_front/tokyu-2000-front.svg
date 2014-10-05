@@ -46,7 +46,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0447342"
+     inkscape:zoom="0.83685236"
      inkscape:cx="219.78253"
      inkscape:cy="366.63857"
      inkscape:document-units="px"
@@ -66,7 +66,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -336,5 +336,18 @@
        id="wiper_rotate"
        inkscape:connector-curvature="0"
        transform="translate(0,308.26825)" />
+    <rect
+       y="522.85461"
+       x="-294.74933"
+       height="86.289467"
+       width="1.4879249"
+       id="rect3025"
+       style="fill:#666666;fill-opacity:1;stroke:#000000;stroke-width:0.27933922;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       transform="scale(-1,1)" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3027"
+       d="m 203.25559,654.17534 90.93222,-90.93221"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
 </svg>
