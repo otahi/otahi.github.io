@@ -89,9 +89,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2438683"
-     inkscape:cx="526.18109"
-     inkscape:cy="683.96102"
+     inkscape:zoom="0.70453478"
+     inkscape:cx="274.95148"
+     inkscape:cy="428.47328"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -109,7 +109,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -349,5 +349,27 @@
          style="font-size:9.95306683px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#f9f9f9;font-family:Sans;-inkscape-font-specification:Sans"
          id="tspan7563"
          sodipodi:role="line" /></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 367.61847,213.24773 0,86.58196"
+       id="path3819"
+       inkscape:connector-curvature="0"
+       transform="translate(0,308.26825)" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3821"
+       d="m 279.61847,483.51598 0,86.58196"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 366.1991,254.40964 55.35567,103.61448 0,0 0,0 0,0 0,0"
+       id="path3823"
+       inkscape:connector-curvature="0"
+       transform="translate(0,308.26825)" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3825"
+       d="m 279.55477,548.67789 -55.35567,103.61448 0,0 0,0 0,0 0,0"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
   </g>
 </svg>
