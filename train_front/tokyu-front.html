@@ -3,50 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>Tokyu Line</title>
-    <style>
-      select{
-        -webkit-appearance: button;
-        -moz-appearance: button;
-        appearance: button;
-        border-radius:6px;
-        width: 100%;
-        height: 60px;
-        line-height: 60px;
-        font-size: 20px;
-        text-indent: 2em;
-        color: #FFFFFF;
-        border: none;
-        cursor: pointer;
-        background:#888888 url(img/down-arrow.svg) no-repeat;
-        background-size:40px 40px;
-        background-position: right center;
-      }
-      button{
-        -webkit-appearance: button;
-        -moz-appearance: button;
-        appearance: button;
-        border-radius:6px;
-        width: 100%;
-        height: 60px;
-        line-height: 60px;
-        color: #FFFFFF;
-        font-size: 20px;
-        background:#888888 no-repeat;
-        background-size:40px 60px;
-      }
-      div#container{
-        width:100%
-      }
-      div#toolbox{
-        width:20%;
-        float: right;
-      }
-      div#train_image{
-        width:80%;
-        float: left;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/train.css" />
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/train.js"></script>
     <script>//<![CDATA[
       var kind;
       var station;
