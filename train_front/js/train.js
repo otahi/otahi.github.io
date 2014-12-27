@@ -51,7 +51,7 @@ function getDest() {
     return document.getElementById("train_form").dest.value;
 }
 function getDestString() {
-    return station[getDest()];
+    return station[getDest()]["string"];
 }
 function getDirection() {
     var direction = {
@@ -173,6 +173,11 @@ function findStation(station){
     });
     return index;
 }
+
+function getStationPronounce(st){
+    return station[st]["pronounce"] ? station[st]["pronounce"] : station[st]["string"];
+}
+
 var order = new Array();
 var preLineKind = '';
 var next = 0;
@@ -195,18 +200,19 @@ function sayNext() {
             next = findStation(getSource());
         };
         if(next == 0 && ( getDest() != order[next]["station"] )){
-            var message = "この電車は" +  kind[getKind()] + station[getDest()] + "行きです。";
+            var message = "この電車わ" +  kind[getKind()] +
+                getStationPronounce(getDest()) + "行きです。";
             textToSpeech(message);
             next += getDirection();
             return;
         };
         if(isSoon) {
             if(order[next]["change"]) {
-                var message = "まもなく" + station[order[next]["station"]] + "です。";
-                message += station[order[next]["station"] + "_change"] + "はお乗り換えです。";
+                var message = "まもなく" + getStationPronounce(order[next]["station"]) + "です。";
+                message += getStationPronounce(order[next]["station"] + "_change") + "はお乗り換えです。";
                 textToSpeech(message);
             } else {
-                var message = "まもなく" + station[order[next]["station"]] + "です。";
+                var message = "まもなく" + getStationPronounce(order[next]["station"]) + "です。";
                 textToSpeech(message);
             };
             if(getDest() == order[next]["station"]){
@@ -215,7 +221,7 @@ function sayNext() {
             };
             next += getDirection();
         } else {
-            var message = "次は" + station[order[next]["station"]] + "に止まります。";
+            var message = "次わ" + getStationPronounce(order[next]["station"]) + "に止まります。";
             textToSpeech(message);
         };
         isSoon = isSoon ? false : true;
