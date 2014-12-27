@@ -1,7 +1,7 @@
 {
-    "kind": {
-        "kind_express": "きゅうこお",
-        "kind_semiexpress": "じゅんきゅう",
-        "kind_local": "各駅停車"
-    }
+    "express": "きゅうこお",
+    "semiexpress": "じゅんきゅう",
+    "greenlocal": "各駅停車",
+    "bulelocal": "各駅停車",
+    "local": "各駅停車"
 }

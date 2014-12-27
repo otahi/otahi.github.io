@@ -48,14 +48,10 @@
     </style>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script>//<![CDATA[
-      var tts;
       var kind;
       var station;
 
       $(document).ready(function(){
-        $.getJSON("js/tts.json", function(data){
-          tts = data;
-        });
         $.getJSON("js/kind.json", function(data){
           kind = data;
         });
@@ -212,6 +208,11 @@
           }
         });
       }
+      function textToSpeech(message){
+        var speech_api = "http://www.yukumo.net/api/v1/text2voice/voice.mp3?text="
+        var audio = new Audio(speech_api + encodeURIComponent(message) );
+        audio.play();
+      }
       function findStation(station){
         var index = 0;
         order.forEach(function(value, i) {
@@ -244,17 +245,19 @@
             next = findStation(getSource());
           };
           if(next == 0 && ( getDest() != order[next]["station"] )){
-            var message = ["kind_general_lead","kind_" + getKind(), getDest(), "dest_general_trail"];
-            playSounds(message);
+            var message = "この電車は" +  kind[getKind()] + station[getDest()] + "行きです。";
+            textToSpeech(message);
             next += getDirection();
             return;
           };
           if(isSoon) {
             if(order[next]["change"]) {
-              playSounds(["soon_lead", order[next]["station"], "soon_trail",
-                         order[next]["change"],"change_tail"]);
+              var message = "まもなく" + station[order[next]["station"]] + "です。";
+              message += station[order[next]["station"] + "_change"] + "はお乗り換えです。";
+              textToSpeech(message);
             } else {
-              playSounds(["soon_lead", order[next]["station"], "soon_trail"]);
+              var message = "まもなく" + station[order[next]["station"]] + "です。";
+              textToSpeech(message);
             };
             if(getDest() == order[next]["station"]){
               next = findStation(getSource());;
@@ -262,7 +265,8 @@
             };
             next += getDirection();
           } else {
-            playSounds(["next_lead", order[next]["station"], "next_trail"]);
+            var message = "次は" + station[order[next]["station"]] + "に止まります。";
+            textToSpeech(message);
           };
           isSoon = isSoon ? false : true;
         };
@@ -319,6 +323,6 @@
       <div style="display: none" id="audios"></div>
     </div>
     <div><a href="http://www.senses-circuit.com/">音源：フリー音楽素材 Senses Circuit</a></div>
-    <div><a href="http://open-jtalk.sourceforge.net/">音声：Open JTalk</a></div>
+    <div><a href="http://www.yukumo.net/">音声：ゆくも！</a></div>
   </body>
 </html>
