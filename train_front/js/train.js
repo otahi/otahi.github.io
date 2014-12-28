@@ -108,6 +108,7 @@ function changeKind() {
     svg.getElementById("kind_bg").style.stroke = getKindFgColor();
     svg.getElementById("kind_bg").style.strokeWidth = 3;
     svg.getElementById("kind_bg").style.strokeDashArray = 20;
+    isDeparture = true
 }
 function changeDest() {
     var svg = document.getElementById("train").getSVGDocument();
@@ -116,6 +117,7 @@ function changeDest() {
     svg.getElementById("dest_string").firstChild.firstChild.nodeValue = dest;
     var fontSize = 40 / dest.length * 3;
     svg.getElementById("dest_string").firstChild.style.fontSize = fontSize;
+    isDeparture = true
 }
 function moveWiper() {
     var svg = document.getElementById("train").getSVGDocument();
@@ -135,7 +137,7 @@ function initCar() {
     document.getElementById("train").onload = initCar;
     changeKind();
     changeDest();
-    //moveWiper();
+    isDeparture = true;
 }
 function playSound(sound) {
     var audio = new Audio("audio/"+ sound + ".mp3");
@@ -181,6 +183,7 @@ function getStationPronounce(st){
 var order = new Array();
 var preLineKind = '';
 var next = 0;
+var isDeparture = true;
 var isSoon = false;
 function sayNext() {
     var lineKind = getLine() + "_" + getKind();
@@ -199,11 +202,12 @@ function sayNext() {
         if(next >= order.length){
             next = findStation(getSource());
         };
-        if(next == 0 && ( getDest() != order[next]["station"] )){
+        if(isDeparture){
             var message = "この電車わ" +  kind[getKind()] +
                 getStationPronounce(getDest()) + "行きです。";
             textToSpeech(message);
             next += getDirection();
+            isDeparture = false
             return;
         };
         if(isSoon) {
@@ -217,6 +221,7 @@ function sayNext() {
             };
             if(getDest() == order[next]["station"]){
                 next = findStation(getSource());;
+                isDeparture = true
                 return;
             };
             next += getDirection();
