@@ -241,7 +241,7 @@ function sayNext() {
             next = findStation(getSource());
         };
         if(isDeparture){
-            var message = "この電車わ" +  kind[getKind()]
+            var message = "この電車は、" +  kind[getKind()] + "、"
                 + getStationPronounce(getDest()) + "行きです。";
             textToSpeech(message);
             next += getDirection();
@@ -259,7 +259,7 @@ function sayNext() {
                 message = "まもなく" + getStationPronounce(order[next]["station"]) + "です。";
             }
 
-            if(getDest() == order[next]["change"]){
+            if(getDest() == order[next]["station"]){
                 message += "この電車は当駅止まりです。お忘れ物ございませんようご注意ください。";
             }
 
