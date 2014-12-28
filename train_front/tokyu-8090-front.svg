@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="tokyu-8950-front.svg"
+   sodipodi:docname="tokyu-8090-front.svg"
    inkscape:export-filename="/Users/otahi/home/kazuto/oimachi-line-express.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -57,7 +57,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.94799685"
+     inkscape:zoom="1.0739027"
      inkscape:cx="98.86644"
      inkscape:cy="267.4616"
      inkscape:document-units="px"
@@ -86,20 +86,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-308.26825)">
-    <rect
-       style="fill:#28170b;fill-opacity:1;stroke:#000000;stroke-width:0.11902833;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="rect3818"
-       width="18.3589"
-       height="82.418091"
-       x="452.89801"
-       y="891.49536" />
-    <rect
-       y="891.49536"
-       x="103.09951"
-       height="82.418091"
-       width="18.3589"
-       id="rect3816"
-       style="fill:#28170b;fill-opacity:1;stroke:#000000;stroke-width:0.11902833;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <text
        sodipodi:linespacing="125%"
        id="text7561"
@@ -113,10 +99,10 @@
          id="tspan7563"
          sodipodi:role="line" /></text>
     <rect
-       style="fill:#28170b;fill-opacity:1;stroke:#000000;stroke-width:0.61863858;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#28170b;fill-opacity:1;stroke:#000000;stroke-width:0.67330092;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect5054"
        width="495.92957"
-       height="82.418091"
+       height="97.626343"
        x="41.91787"
        y="845.08173" />
     <path
