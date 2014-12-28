@@ -108,6 +108,7 @@ function changeKind() {
     svg.getElementById("kind_bg").style.stroke = getKindFgColor();
     svg.getElementById("kind_bg").style.strokeWidth = 3;
     svg.getElementById("kind_bg").style.strokeDashArray = 20;
+    initCurrent();
     isDeparture = true
 }
 function changeDest() {
@@ -126,8 +127,44 @@ function changeDest() {
     
     svg.getElementById("dest_string").firstChild.style.fontSize = fontSize;
 
+    initCurrent();
     isDeparture = true
 }
+
+function initCurrent() {
+    var current = $("#train_form [name=current]");
+    current.children().remove();
+
+    var lineKind = getLine() + "_" + getKind();
+
+    $.getJSON("js/"+ lineKind + ".json", function(data){
+        order = data;
+        if (current.children().length ==0 ) {
+            var selected = "";
+            for (var i=0 ; i < order.length ; i++) {
+
+                next == i ? selected = "selected=\"slected\"" : selected = "";
+                
+                current.append("<option value=\""
+                               + order[i]["station"]
+                               + "\""
+                               + selected + ">"
+                               + "いま：" + station[order[i]["station"]]["string"]
+                               + "</option>");
+            };
+        };
+    });
+}
+
+function changeCurrent() {
+    var station = $("#train_form [name=current]").val();
+    for (var i=0 ; i < order.length ; i++) {
+        if(order[i]["station"]==station) {
+            next = i + getDirection();
+        }
+    }
+}
+
 function moveWiper() {
     var svg = document.getElementById("train").getSVGDocument();
     var wipe = '<animateMotion path="M10,0 100,0 10,0" dur="1s" repeatCount="indefinite" />';
@@ -195,15 +232,6 @@ var next = 0;
 var isDeparture = true;
 var isSoon = false;
 function sayNext() {
-    var lineKind = getLine() + "_" + getKind();
-    if(lineKind != preLineKind || order.length == 0)  {
-        preLineKind = lineKind;
-        $.getJSON("js/"+ lineKind + ".json", function(data){
-            order = data;
-            next = findStation(getSource());
-            sayNext();
-        });
-    };
     if(order.length > 0){
         if(next < 0){
             next = findStation(getSource());
@@ -220,14 +248,16 @@ function sayNext() {
             return;
         };
         if(isSoon) {
+            var message;
             if(order[next]["change"]) {
-                var message = "まもなく" + getStationPronounce(order[next]["station"]) + "です。";
+                message = "まもなく" + getStationPronounce(order[next]["station"]) + "です。";
                 message += getStationPronounce(order[next]["station"] + "_change") + "はお乗り換えです。";
-                textToSpeech(message);
             } else {
-                var message = "まもなく" + getStationPronounce(order[next]["station"]) + "です。";
-                textToSpeech(message);
+                message = "まもなく" + getStationPronounce(order[next]["station"]) + "です。";
             };
+            textToSpeech(message);
+            $("#train_form [name=current]").val(order[next]["station"]);
+
             if(getDest() == order[next]["station"]){
                 next = findStation(getSource());;
                 isDeparture = true
@@ -235,7 +265,7 @@ function sayNext() {
             };
             next += getDirection();
         } else {
-            var message = "次わ" + getStationPronounce(order[next]["station"]) + "に止まります。";
+            var message = "つぎは、" + getStationPronounce(order[next]["station"]) + "に止まります。";
             textToSpeech(message);
         };
         isSoon = isSoon ? false : true;

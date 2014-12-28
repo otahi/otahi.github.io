@@ -26,19 +26,21 @@
             <option value="local">各停</option>
           </select>
           <select name="dest" onchange="changeDest()">
-            <option value="DT27" selected="slected">中央林間</option>
-            <option value="DT22">長津田</option>
-            <option value="DT11">梶が谷</option>
-            <option value="TS03">押上</option>
-            <option value="TI02">久喜</option>
-            <option value="TN03">南栗橋</option>
-            <option value="DT14">鷺沼</option>
-            <option value="OM15">二子玉川</option>
-            <option value="OM16">溝の口</option>
-            <option value="OM01">大井町</option>
-            <option value="OM10">自由が丘</option>
-            <option value="Z11">清澄白河</option>
-            <option value="OM08">大岡山</option>
+            <option value="DT27" selected="slected">中央林間 行き</option>
+            <option value="DT22">長津田 行き</option>
+            <option value="DT11">梶が谷 行き</option>
+            <option value="TS03">押上 行き</option>
+            <option value="TI02">久喜 行き</option>
+            <option value="TN03">南栗橋 行き</option>
+            <option value="DT14">鷺沼 行き</option>
+            <option value="OM15">二子玉川 行き</option>
+            <option value="OM16">溝の口 行き</option>
+            <option value="OM01">大井町 行き</option>
+            <option value="OM10">自由が丘 行き</option>
+            <option value="Z11"> 清澄白河 行き</option>
+            <option value="OM08">大岡山 行き</option>
+          </select>
+          <select name="current" onchange="changeCurrent()">
           </select>
           <br>
           <button type="button" name="slow_train" value="slow_train" onclick="playSound(this.value)">ゆっくり走る</button>
