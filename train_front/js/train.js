@@ -115,8 +115,17 @@ function changeDest() {
     if (svg == null) return;
     var dest = getDestString();
     svg.getElementById("dest_string").firstChild.firstChild.nodeValue = dest;
-    var fontSize = 40 / dest.length * 3;
+    var fontSize = 120 / dest.length;
+    var x = 
+        parseFloat(svg.getElementById("dest_string").getAttribute("x"));
+
+    if (dest.length < 3) {
+        fontSize = fontSize > 40 ? 40 : fontSize;
+        svg.getElementById("dest_string").firstChild.setAttribute("x", x + 15);
+    }
+    
     svg.getElementById("dest_string").firstChild.style.fontSize = fontSize;
+
     isDeparture = true
 }
 function moveWiper() {
