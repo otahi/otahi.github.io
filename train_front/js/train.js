@@ -122,9 +122,10 @@ function changeDest() {
 
     if (dest.length < 3) {
         fontSize = fontSize > 40 ? 40 : fontSize;
-        svg.getElementById("dest_string").firstChild.setAttribute("x", x + 15);
+        x += 15;
     }
-    
+
+    svg.getElementById("dest_string").firstChild.setAttribute("x", x);
     svg.getElementById("dest_string").firstChild.style.fontSize = fontSize;
 
     initCurrent();
@@ -240,8 +241,8 @@ function sayNext() {
             next = findStation(getSource());
         };
         if(isDeparture){
-            var message = "この電車わ" +  kind[getKind()] +
-                getStationPronounce(getDest()) + "行きです。";
+            var message = "この電車わ" +  kind[getKind()]
+                + getStationPronounce(getDest()) + "行きです。";
             textToSpeech(message);
             next += getDirection();
             isDeparture = false
@@ -249,12 +250,19 @@ function sayNext() {
         };
         if(isSoon) {
             var message;
+            var messageDest = "";
             if(order[next]["change"]) {
                 message = "まもなく" + getStationPronounce(order[next]["station"]) + "です。";
                 message += getStationPronounce(order[next]["station"] + "_change") + "はお乗り換えです。";
+                
             } else {
                 message = "まもなく" + getStationPronounce(order[next]["station"]) + "です。";
-            };
+            }
+
+            if(getDest() == order[next]["change"]){
+                message += "この電車は当駅止まりです。お忘れ物ございませんようご注意ください。";
+            }
+
             textToSpeech(message);
             $("#train_form [name=current]").val(order[next]["station"]);
 
@@ -262,12 +270,12 @@ function sayNext() {
                 next = findStation(getSource());;
                 isDeparture = true
                 return;
-            };
+            }
             next += getDirection();
         } else {
             var message = "つぎは、" + getStationPronounce(order[next]["station"]) + "に止まります。";
             textToSpeech(message);
-        };
+        }
         isSoon = isSoon ? false : true;
-    };
+    }
 }
