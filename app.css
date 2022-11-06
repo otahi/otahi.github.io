@@ -1,0 +1,13 @@
+nav button {
+    border-style: none;
+}
+
+#title {
+    display: flex;
+    font-size: 1.4em;
+    vertical-align: middle;
+    padding: 10px;
+    text-indent: 64px;
+    text-align: left;
+    background: url(./otahi.jpg) left top/48px auto no-repeat;
+}
